@@ -1,0 +1,21 @@
+<h2> Celebrities</h2>
+
+<header>
+  <nav>
+    <a href="/"> Home</a>
+    <a href="/celebrities">Celebrities</a>
+  </nav>
+</header>
+
+<a href="/celebrities/new"> Add a Celeb</a>
+
+<ul>
+  <% listOfCelebrities.forEach((oneCeleb)=> { %>
+    <li>
+      <h3> <%= oneCeleb.name %> </h3>
+    </li>
+    <li>
+      <a href="/celebrities/<%= oneCeleb._id %>"> View Detail </a>
+    </li>
+  <% }) %>
+</ul>
